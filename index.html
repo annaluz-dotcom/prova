@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratório Prático de JavaScript e DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <h1 id="titulo-principal">Painel de Exercícios de JavaScript</h1>
+    <p id="descricao-header">Conectando HTML, CSS e JS através da manipulação do DOM.</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Módulo 1: Introdução ao DOM -->
+    <section class="card" id="modulo-1">
+      <h2>Módulo 1: Introdução ao DOM</h2>
+      <p id="paragrafo-boas-vindas">Texto original de boas-vindas.</p>
+      <button id="btn-alterar-texto">Executar Módulo 1</button>
+    </section>
+
+    <!-- Módulo 2: Eventos no JavaScript -->
+    <section class="card" id="modulo-2">
+      <h2>Módulo 2: Eventos e Calculadora</h2>
+      <div class="form-group">
+        <input type="number" id="valor1" placeholder="Número 1">
+        <input type="number" id="valor2" placeholder="Número 2">
+        <button id="btn-somar">Somar Valores</button>
+      </div>
+      <p class="resultado">Resultado: <span id="resultado-soma">0</span></p>
+    </section>
+
+    <!-- Módulo 3: Criação e Remoção de Elementos -->
+    <section class="card" id="modulo-3">
+      <h2>Módulo 3: Criação e Remoção Dinâmica</h2>
+      <button id="btn-criar-aviso">Gerar Novo Aviso</button>
+      <div id="container-avisos" class="area-avisos"></div>
+    </section>
+
+    <!-- Módulo 4: Classes e Estilos via JS -->
+    <section class="card" id="modulo-4">
+      <h2>Módulo 4: Classes e Estilos</h2>
+      <button id="btn-toggle-tema">Alternar Tema Card</button>
+      <table class="tabela-status">
+        <thead>
+          <tr><th>Módulo</th><th>Situação</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Aulas Teóricas</td><td class="situacao">Concluído</td></tr>
+          <tr><td>Exercícios Práticos</td><td class="situacao">Pendente</td></tr>
+          <tr><td>Projeto Final</td><td class="situacao">Concluído</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Módulo 5: Inputs e Validação Simples -->
+    <section class="card" id="modulo-5">
+      <h2>Módulo 5: Validação de Formulário</h2>
+      <form id="form-cadastro">
+        <div class="campo-dado">
+          <label for="nome-usuario">Nome de Utilizador:</label>
+          <input type="text" id="nome-usuario" placeholder="Mínimo 5 caracteres">
+          <span class="mensagem-erro" id="erro-nome">O nome deve ter pelo menos 5 caracteres.</span>
+        </div>
+      </form>
+    </section>
+
+    <!-- Módulo 6: Delegação de Eventos -->
+    <section class="card" id="modulo-6">
+      <h2>Módulo 6: Delegação de Eventos</h2>
+      <p>Clique em qualquer botão do painel abaixo:</p>
+      <div id="painel-botoes" class="painel-botoes">
+        <button class="btn-acao" id="btn-1">Opção A</button>
+        <button class="btn-acao" id="btn-2">Opção B</button>
+        <button class="btn-acao" id="btn-3">Opção C</button>
+      </div>
+      <p class="log-resposta">Botão clicado: <strong id="log-botao">Nenhum</strong></p>
+    </section>
+
+    <!-- Módulo 7: Atributos e Dataset -->
+    <section class="card" id="modulo-7">
+      <h2>Módulo 7: Atributos e Dataset</h2>
+      <div id="caixa-destaque" class="caixa-destaque">Caixa de Estado</div>
+      <div class="controles-atributos">
+        <button id="btn-prioridade-alta">Prioridade Alta</button>
+        <button id="btn-prioridade-baixa">Prioridade Baixa</button>
+        <button id="btn-limpar-atributo">Remover Prioridade</button>
+      </div>
+      <p>Status do Atributo: <span id="info-atributo">Nenhum</span></p>
+    </section>
+
+    <!-- Módulo 8: Arrays e Renderização -->
+    <section class="card" id="modulo-8">
+      <h2>Módulo 8: Renderização Dinâmica</h2>
+      <form id="form-tarefa">
+        <input type="text" id="input-tarefa-titulo" placeholder="Nova tarefa...">
+        <button type="submit">Adicionar</button>
+      </form>
+      <ul id="lista-tarefas" class="lista-tarefas"></ul>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

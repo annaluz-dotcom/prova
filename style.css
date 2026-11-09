@@ -1,0 +1,176 @@
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-body: #f8fafc;
+  --card-bg: #ffffff;
+  --text-color: #1e293b;
+  --border-color: #e2e8f0;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --warning: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.main-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main-header h1 {
+  color: var(--primary);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card.dark-theme {
+  background: #0f172a;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: var(--primary);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 6px;
+}
+
+.form-group, .campo-dado, .controles-atributos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+input, button, select {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+.mensagem-erro {
+  color: var(--danger);
+  font-size: 0.85rem;
+  display: none; /* Oculto por padrão conforme Aula 3.05 */
+}
+
+.area-avisos {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aviso-item {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabela-status {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabela-status th, .tabela-status td {
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  text-align: left;
+}
+
+.painel-botoes {
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.caixa-destaque {
+  padding: 15px;
+  border: 2px dashed var(--border-color);
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Customização por Data Attributes */
+.caixa-destaque[data-prioridade="alta"] {
+  border-color: var(--danger);
+  background-color: #fef2f2;
+  color: var(--danger);
+}
+
+.caixa-destaque[data-prioridade="baixa"] {
+  border-color: var(--success);
+  background-color: #f0fdf4;
+  color: var(--success);
+}
+
+.lista-tarefas {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.lista-tarefas li {
+  padding: 8px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.lista-tarefas li.riscado {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
